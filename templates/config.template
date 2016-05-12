@@ -1,0 +1,5 @@
+## Pattern Migration
+#set( $email_config = $fragment_container_config_gmail )
+#set( $src_sys_config = $fragment_container_config_sfdc_src )
+#set( $dst_sys_config = $fragment_container_config_sfdc_dst )
+#evaluate( $fragment_pattern_migration_config )

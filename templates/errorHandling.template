@@ -1,0 +1,3 @@
+## Default Exception Strategy
+#set( $error_handling_logic = $fragment_container_choiceexceptionstrategy_default )
+#evaluate( $fragment_pattern_error_handling )

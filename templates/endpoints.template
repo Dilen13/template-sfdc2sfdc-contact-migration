@@ -1,0 +1,4 @@
+## Pattern Migration
+#set( $trigger_flow = $fragment_container_flow_migration_trigger )
+#set( $connector_config = $fragment_container_config_http_general_binding)
+#evaluate( $fragment_pattern_migration_endpoints )

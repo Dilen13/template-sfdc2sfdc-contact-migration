@@ -1,0 +1,19 @@
+##
+## Pattern Migration beggining
+##
+## Main flow definition (pattern argument)
+##
+#set( $batch_name = $fragment_element_label_business_logic_migration_batch )
+#set( $exception_strategy = $fragment_element_label_default_choice_exception_strategy )
+#set( $main_flow = "#evaluate( $fragment_container_flow_batch_job_trigger )" )
+##
+## Batch Job definition (pattern argument)
+##
+#set( $query_entities = $fragment_processors_processorgroup_sfdc_query_contacts )
+#set( $lookup_entities = $fragment_container_batchstep_lookup_contact_sfdc )
+#set( $prepare_related_entities = $fragment_container_batchstep_sfdc_find_or_create_account_in_b_step )
+#set( $create_upsert_entities = $fragment_container_batchstep_sfdc_create_contacts_in_b_step )
+#set( $scatter_gather_results = $fragment_processors_processorgroup_scattergather_results )
+#set( $batch_job = "#evaluate( $fragment_container_batchjob_migration )" )
+##
+#evaluate( $fragment_pattern_migration_business_logic )
